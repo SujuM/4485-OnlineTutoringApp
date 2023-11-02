@@ -1,5 +1,16 @@
 # 4485-OnlineTutoringApp
 
+Bash script:
+
+Please delete \4485-OnlineTutoringApp\data\myDB.mv.db before you run bash script.
+Otherwise, build fails with "contextLoads() FAILED"
+
+$chmod +x myscript.sh
+$./myscript.sh
+
+
+
+
 Using Intelij IDEA Ultimate to use SpringBoot and H2.
 JDK 17    <- It has to be this version for all other dependencies.
 Currently, Driver class is SpringDataJpaApplication. (we will needs to rename to OnlineTutoringApplication sometime soon.)
