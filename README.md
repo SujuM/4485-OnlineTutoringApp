@@ -2,6 +2,7 @@
 
 Bash script:
 
+Update directory path in the bash script. (3 places)
 Please delete \4485-OnlineTutoringApp\data\myDB.mv.db before you run bash script.
 Otherwise, build fails with "contextLoads() FAILED"
 
