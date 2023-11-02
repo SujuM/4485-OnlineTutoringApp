@@ -5,8 +5,8 @@ Bash script:
 Please delete \4485-OnlineTutoringApp\data\myDB.mv.db before you run bash script.
 Otherwise, build fails with "contextLoads() FAILED"
 
-$chmod +x myscript.sh
-$./myscript.sh
+chmod +x myscript.sh
+./myscript.sh
 
 
 
