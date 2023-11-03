@@ -1,6 +1,7 @@
 package com.tutoring.springdatajpa.http.controllers;
 
 import com.tutoring.springdatajpa.entities.User;
+import com.tutoring.springdatajpa.repositories.RoleRepository;
 import com.tutoring.springdatajpa.repositories.UserRepository;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
@@ -18,15 +19,22 @@ import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
+
+// Spring MVC controller class : handles incoming HTTP GET requests to the URL path
+// to implement REST APIs.
 @RestController
 public class AuthController {
+
     private UserRepository userRepository;
+    private RoleRepository roleRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public AuthController(UserRepository userRepository) {
+    public AuthController(UserRepository userRepository,
+                          RoleRepository roleRepository) {
         this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
     }
 
     @GetMapping("/debug/users")
@@ -41,6 +49,7 @@ public class AuthController {
     {
         User user = new User(request.email, passwordEncoder.encode(request.password));
 
+        //creates a new User entity and saves it to the database.
         this.userRepository.save(user);
 
         return new ResponseEntity<>("registration success", HttpStatus.OK);

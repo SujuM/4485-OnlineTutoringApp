@@ -1,9 +1,6 @@
 package com.tutoring.springdatajpa.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -13,38 +10,39 @@ public class Appointment {
     @GeneratedValue
     @Column(name = "id")
     private int id;
+
     @Column(name = "tutor_id")
-    private int tutor_id;
+    private int tutorID;
+
     @Column(name = "student_id")
-    private int student_id;
-
-    @Column(name = "start_time")
-    private Date start_time;
-
-    @Column(name = "end_time")
-    private Date end_time;
-    @Column(name = "book_time")
-    private Date book_time;
-    @Column(name = "canceled")
-    private boolean canceled;
+    private int studentID;
 
 
     public Appointment() {}
 
-    public Appointment(int tutor_id, int student_id, Date start_time, Date end_time, Date book_time) {
-        this.tutor_id = tutor_id;
-        this.student_id = student_id;
-        this.start_time = start_time;
-        this.end_time = end_time;
-        this.book_time = book_time;
-        this.canceled = false;
+    public Appointment(int tutorID, int studentID, Date start_time, Date end_time, Date book_time) {
+        this.tutorID = tutorID;
+        this.studentID = studentID;
     }
 
     public int getId() {
         return id;
     }
-    public void cancel() {
-        this.canceled = true;
+
+    public int getTutorID() {
+        return tutorID;
+    }
+
+    public void setTutorID(User tutor) {
+        this.tutorID = tutor.getId();
+    }
+
+    public int getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(User student) {
+        this.studentID = student.getId();
     }
 }
 

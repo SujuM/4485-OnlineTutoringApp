@@ -4,6 +4,7 @@ import com.tutoring.springdatajpa.entities.User;
 import com.tutoring.springdatajpa.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.logging.LogLevel;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
+
 
 @Service
 public class AppUserDetailsService implements UserDetailsService {
@@ -38,4 +40,6 @@ public class AppUserDetailsService implements UserDetailsService {
 
         return user.get();
     }
+
+
 }

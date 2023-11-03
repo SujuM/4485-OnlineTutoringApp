@@ -2,17 +2,18 @@ package com.tutoring.springdatajpa.http.controllers;
 
 import com.tutoring.springdatajpa.entities.Appointment;
 import com.tutoring.springdatajpa.repositories.AppointmentRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+//Annotation
 @RestController
 public class AppointmentController {
 
+    @Autowired
     private final AppointmentRepository repository;
 
     public AppointmentController(AppointmentRepository repository) {
@@ -20,16 +21,28 @@ public class AppointmentController {
         this.repository = repository;
     }
 
+    // Show the list of user's appointments
     @GetMapping("/appointments")
-    public List<Appointment> index() {
+    public List<Appointment> getAppointments() {
         List<Appointment> result = new ArrayList<Appointment>();
          this.repository.findAll().forEach(result::add);
          return result;
     }
 
-    @GetMapping("/appointments/{id}")
-    public Optional<Appointment> show(@PathVariable long id) {
+    @GetMapping("/appointment/{id}")
+    public Optional<Appointment> getAppointment(@PathVariable long id) {
         return this.repository.findById(id);
     }
 
+    @DeleteMapping("/appointment/{id}")
+    public void deleteAppointment(@PathVariable("id") long id) {
+        this.repository.deleteById(id);
+    }
+    @PostMapping("/appointment")
+    public void addAppointment(@RequestBody Appointment appointment) {
+        this.repository.save(appointment);
+    }
+    @PutMapping("/appointment")
+    public void updateAppointment(@RequestBody Appointment appointment) {
+    }
 }
