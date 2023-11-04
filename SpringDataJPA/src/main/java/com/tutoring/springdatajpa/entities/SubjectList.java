@@ -13,35 +13,43 @@ public class SubjectList
 
     @Id
     @GeneratedValue
-    private Long subjectid;
+    @Column(name = "subjectId")
+    private int subjectId;
 
     @Column(name = "subjectName")
     private String subjectName;
 
-    @Column(name = "subjectTutor")
-    private String subjectTutor;
+    @Column(name = "tutorName")
+    private String tutorName;
+    @Column(name = "tutorId")
+    private int tutorId;
 
     public SubjectList() {
 
     }
 
-    public void setId(Long id) {
-        this.subjectid = id;
+    public void setId(int id) {
+        this.subjectId = id;
     }
 
-    public Long getId() {
-        return subjectid;
+    public int getSubjectId() {
+        return subjectId;
     }
 
     public String getSubjectName() {
         return subjectName;
     }
-    public SubjectList(Long subjectid, String subjectName) {
-        this.subjectid = subjectid;
-        this.subjectName = subjectName;
+    public String getTutorName() {
+        return subjectName;
     }
-    public String getSubjectTutor() {
-        return subjectTutor;
+    public int getTutorId() {
+        return tutorId;
+    }
+    public SubjectList(int subjectId, String subjectName, String tutorName, int tutorId) {
+        this.subjectId = subjectId;
+        this.subjectName = subjectName;
+        this.tutorId = tutorId;
+        this.tutorName = tutorName;
     }
 
 }

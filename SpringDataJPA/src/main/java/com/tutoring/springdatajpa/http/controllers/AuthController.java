@@ -39,11 +39,15 @@ public class AuthController {
     @PostMapping("/auth/register")
     public ResponseEntity<String> register(@Valid @RequestBody RegisterRequest request)
     {
-        User user = new User(request.email, passwordEncoder.encode(request.password));
+        if(checkPassword(request.password))
+        {
+            User user = new User(request.email, passwordEncoder.encode(request.password));
+            this.userRepository.save(user);
+            return new ResponseEntity<>("registration success", HttpStatus.OK);
+        }
+        return new ResponseEntity<>("registration unsuccessful", HttpStatus.NOT_ACCEPTABLE);
 
-        this.userRepository.save(user);
 
-        return new ResponseEntity<>("registration success", HttpStatus.OK);
     }
 
     @GetMapping("/users")
@@ -51,6 +55,10 @@ public class AuthController {
         List<User> result = new ArrayList<User>();
         this.userRepository.findAll().forEach(result::add);
         return result;
+    }
+    public boolean checkPassword(String password)
+    {
+        return(password.matches("^(?=.*[0-9])" + "(?=.*[a-z])(?=.*[A-Z])" + "(?=.*[@#$%^&+=])" + "(?=\\S+$).{8,20}$"));
     }
 }
 

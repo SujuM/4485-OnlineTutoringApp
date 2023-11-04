@@ -2,9 +2,11 @@ package com.tutoring.springdatajpa;
 
 
 import com.tutoring.springdatajpa.entities.Appointment;
+import com.tutoring.springdatajpa.entities.SubjectList;
 import com.tutoring.springdatajpa.entities.Tutor;
 import com.tutoring.springdatajpa.entities.User;
 import com.tutoring.springdatajpa.repositories.AppointmentRepository;
+import com.tutoring.springdatajpa.repositories.SubjectListRepository;
 import com.tutoring.springdatajpa.repositories.TutorRepository;
 import com.tutoring.springdatajpa.repositories.UserRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -22,7 +24,7 @@ public class SpringDataJpaApplication {
     }
 
     @Bean
-    public CommandLineRunner run(UserRepository userRepository, TutorRepository tutorRepository, AppointmentRepository appointmentRepository) {
+    public CommandLineRunner run(UserRepository userRepository, TutorRepository tutorRepository, AppointmentRepository appointmentRepository, SubjectListRepository subjectListRepository) {
         return (args) -> {
             //insertFourEmployees(repository);
             //System.out.println(repository.findAll());
@@ -36,6 +38,9 @@ public class SpringDataJpaApplication {
             insertAppointments(appointmentRepository);
             System.out.println(appointmentRepository.findAll());
 
+            insertSubjectList(subjectListRepository);
+            System.out.println(subjectListRepository.findAll());
+
         };
     }
     /*
@@ -47,19 +52,23 @@ public class SpringDataJpaApplication {
     }
     */
     private void insertUsers(UserRepository repository) {
-        repository.save(new User("johndoe@gmail.com", "password123"));
-        repository.save(new User("janedoe@gmail.com", "password456"));
+        repository.save(new User("johndoe@gmail.com", "Password123$"));
+        repository.save(new User("janedoe@gmail.com", "passWord4#56"));
     }
 
     private void insertTutors(TutorRepository repository) {
-        repository.save(new Tutor("tutor4u@yahoo.com", "password123"));
-        repository.save(new Tutor("johnsmith@hotmail.com", "qwerty"));
+        repository.save(new Tutor("tutor4u@yahoo.com", "passwoRd123*"));
+        repository.save(new Tutor("johnsmith@hotmail.com", "qwertyeFjkfe&"));
     }
 
     private void insertAppointments(AppointmentRepository repository) {
         repository.save(new Appointment(1, 2, new Date(2023, 10, 20, 10, 0),
                 new Date(2023, 10, 20, 11, 0),
                 new Date(2023, 10, 19, 10, 0)));
+    }
+    private void insertSubjectList(SubjectListRepository repository) {
+        repository.save(new SubjectList(1000, "Math", "Abigail Doe", 3294));
+        repository.save(new SubjectList(1001, "Science", "Tessa Warren", 8774));
     }
 
 }
