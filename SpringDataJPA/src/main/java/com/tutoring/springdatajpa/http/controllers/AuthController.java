@@ -39,6 +39,7 @@ public class AuthController {
     @PostMapping("/auth/register")
     public ResponseEntity<String> register(@Valid @RequestBody RegisterRequest request)
     {
+
         if(checkPassword(request.password))
         {
             User user = new User(request.email, passwordEncoder.encode(request.password));
@@ -46,8 +47,6 @@ public class AuthController {
             return new ResponseEntity<>("registration success", HttpStatus.OK);
         }
         return new ResponseEntity<>("registration unsuccessful", HttpStatus.NOT_ACCEPTABLE);
-
-
     }
 
     @GetMapping("/users")

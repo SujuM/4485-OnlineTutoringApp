@@ -3,6 +3,7 @@ package com.tutoring.springdatajpa.repositories;
 import com.tutoring.springdatajpa.entities.Appointment;
 import com.tutoring.springdatajpa.entities.User;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

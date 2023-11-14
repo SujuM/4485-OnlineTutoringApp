@@ -8,10 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class SubjectListService
 {
     private final SubjectListRepository subjectListRespository;
@@ -20,7 +23,7 @@ public class SubjectListService
     public SubjectListService (SubjectListRepository subjectListRepository) {
         this.subjectListRespository = subjectListRepository;
     }
-    public SubjectList getTutorsbySubjectName(String subject) throws SubjectNameNotFoundException {
+    public SubjectList getTutorsbySubjectName(@PathVariable String subject) throws SubjectNameNotFoundException {
         Optional<SubjectList> tutors = this.subjectListRespository.findTutorsBySubjectName(subject);
 
         if (tutors.isEmpty()) {

@@ -35,12 +35,14 @@ public class SubjectList
     public int getSubjectId() {
         return subjectId;
     }
-
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
+    }
     public String getSubjectName() {
         return subjectName;
     }
     public String getTutorName() {
-        return subjectName;
+        return tutorName;
     }
     public int getTutorId() {
         return tutorId;

@@ -32,8 +32,8 @@ public class SpringDataJpaApplication {
             insertUsers(userRepository);
             System.out.println(userRepository.findAll());
 
-            insertTutors(tutorRepository);
-            System.out.println(tutorRepository.findAll());
+//            insertTutors(tutorRepository);
+//            System.out.println(tutorRepository.findAll());
 
             insertAppointments(appointmentRepository);
             System.out.println(appointmentRepository.findAll());
@@ -56,10 +56,10 @@ public class SpringDataJpaApplication {
         repository.save(new User("janedoe@gmail.com", "passWord4#56"));
     }
 
-    private void insertTutors(TutorRepository repository) {
-        repository.save(new Tutor("tutor4u@yahoo.com", "passwoRd123*"));
-        repository.save(new Tutor("johnsmith@hotmail.com", "qwertyeFjkfe&"));
-    }
+//    private void insertTutors(TutorRepository repository) {
+//        repository.save(new Tutor("tutor4u@yahoo.com", "passwoRd123*"));
+//        repository.save(new Tutor("johnsmith@hotmail.com", "qwertyeFjkfe&"));
+//    }
 
     private void insertAppointments(AppointmentRepository repository) {
         repository.save(new Appointment(1, 2, new Date(2023, 10, 20, 10, 0),

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import java.util.List;
 
 import java.util.Collection;
 
@@ -21,6 +22,19 @@ public class User implements UserDetails {
 
     @Column
     private boolean enabled;
+
+    @Column
+    private Boolean isTutor;
+
+    @Column
+    private Boolean isCriminal = false;
+
+    @OneToMany
+    private List <User> favoriteTutorList;
+
+    @Column
+    private int totalHours;
+
 
     public User() {
 
@@ -66,5 +80,27 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+
+    public boolean isTutor() {return false;}
+
+    public boolean isCriminal(){return false;}
+
+    public List<User> getFavoriteTutorList(){return favoriteTutorList;}
+    public void addTutorToFavorites(User tutor)
+    {
+        if(favoriteTutorList.contains(tutor) == false)
+        {
+            favoriteTutorList.add(tutor);
+        }
+    }
+    public int getTotalHours(){return totalHours;}
+    public void removeTutorFromFavorites(User tutor)
+    {
+        if(favoriteTutorList.contains(tutor) == true)
+        {
+            favoriteTutorList.remove(tutor);
+        }
     }
 }
