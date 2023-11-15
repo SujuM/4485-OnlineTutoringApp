@@ -17,26 +17,29 @@ public class Tutor extends User{
     @ElementCollection
     private List<String> tutorSubjectList;
 
-    @Column(nullable = false)
-    private String username;
-    @Column
-    private Boolean isTutor;
-    public String getUsername() {
-        return username;
-    }
-    public boolean isTutor() {return false;}
+
+//    @Column(nullable = false)
+//    private String username;
+//    @Column
+//    private Boolean isTutor;
+//    public String getUsername() {
+//        return username;
+//    }
+//    public Boolean isTutor() {return false;}
     public Tutor() {
 
     }
-    public Tutor(String aboutMe, List<String> tutorSubjectList)
+    public Tutor(String aboutMe, List<String> tutorSubjectList, String username, String password)
     {
+        super(username, password);
         this.aboutMe = aboutMe;
         this.tutorSubjectList = tutorSubjectList;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+
+//    public void setUsername(String username) {
+//        this.username = username;
+//    }
 
     public String getAboutMe(){return aboutMe;}
     public List<String> getAvailableHours(){return availableHours;}

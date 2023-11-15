@@ -21,7 +21,7 @@ public class SubjectListController
             this.repository = repository;
         }
 
-        @GetMapping("/tutors")
+        @GetMapping("/searchTutor")
         public List<Tutor> searchTutorsBySubject(@RequestParam String subject)
         {
             return searchTutorService.searchForTutorsBySubjectNames(subject);

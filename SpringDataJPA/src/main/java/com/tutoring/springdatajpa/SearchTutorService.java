@@ -28,7 +28,7 @@ public class SearchTutorService
     }
     public List<String> searchForSubjectsByTutorName(String username)
     {
-        Tutor tutor = tutorRepository.findByNameAndIsTutor(username, true);
+        Tutor tutor = tutorRepository.findByUsernameAndIsTutor(username, true);
         if(tutor != null && tutor.getSubjectList() != null )
         {
             return tutor.getSubjectList();
@@ -42,7 +42,7 @@ public class SearchTutorService
     //
     public void addSubjectToSubjectList(String username, String subject)
     {
-        Tutor tutor = tutorRepository.findByNameAndIsTutor(username, true);
+        Tutor tutor = tutorRepository.findByUsernameAndIsTutor(username, true);
         if(tutor != null ) {
             if (tutor.getSubjectList() != null) {
                 tutor.setSubjectList(new ArrayList<>());
@@ -56,7 +56,7 @@ public class SearchTutorService
     }
     public void removeSubjectToSubjectList(String username, String subject)
     {
-        Tutor tutor = tutorRepository.findByNameAndIsTutor(username, true);
+        Tutor tutor = tutorRepository.findByUsernameAndIsTutor(username, true);
         if(tutor != null ) {
             tutor.removeSubjectToSubjectList(subject);
             tutorRepository.save(tutor);

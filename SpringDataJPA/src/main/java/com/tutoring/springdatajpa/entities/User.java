@@ -27,13 +27,15 @@ public class User implements UserDetails {
     private Boolean isTutor;
 
     @Column
-    private Boolean isCriminal = false;
+    private Boolean isCriminal;
 
     @OneToMany
     private List <User> favoriteTutorList;
 
     @Column
     private int totalHours;
+
+
 
 
     public User() {
@@ -43,6 +45,13 @@ public class User implements UserDetails {
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public User(String username, String password, Boolean isTutor, Boolean isCriminal) {
+        this.username = username;
+        this.password = password;
+        this.isTutor = isTutor;
+        this.isCriminal = isCriminal;
     }
 
     public int getId() {
@@ -83,11 +92,17 @@ public class User implements UserDetails {
     }
 
 
-    public boolean isTutor() {return false;}
+    public Boolean isTutor() {return isTutor;}
 
-    public boolean isCriminal(){return false;}
+    public void setIsTutor(boolean isTutor){this.isTutor = isTutor;}
 
+    public Boolean isCriminal(){return isCriminal;}
+    public void setIsCriminal(boolean isCriminal){this.isCriminal = isCriminal;}
+
+    public void setTotalHours(int totalHours){this.totalHours = totalHours;}
+    public void addTotalHours(int hours){this.totalHours += hours;}
     public List<User> getFavoriteTutorList(){return favoriteTutorList;}
+
     public void addTutorToFavorites(User tutor)
     {
         if(favoriteTutorList.contains(tutor) == false)

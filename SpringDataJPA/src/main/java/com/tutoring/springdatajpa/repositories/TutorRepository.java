@@ -19,5 +19,5 @@ public interface TutorRepository extends CrudRepository<Tutor, Long>  {
     List<Tutor> searchTutorBySubjectName(String subject);
 
     List<Tutor> findByTutorSubjectListContaining(String subject);
-    Tutor findByNameAndIsTutor(String Name, boolean isTutor);
+    Tutor findByUsernameAndIsTutor(String username, boolean isTutor);
 }

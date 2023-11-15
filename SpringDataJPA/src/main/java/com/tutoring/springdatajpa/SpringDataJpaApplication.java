@@ -14,7 +14,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 public class SpringDataJpaApplication {
@@ -32,8 +34,9 @@ public class SpringDataJpaApplication {
             insertUsers(userRepository);
             System.out.println(userRepository.findAll());
 
-//            insertTutors(tutorRepository);
-//            System.out.println(tutorRepository.findAll());
+
+            insertTutors(tutorRepository);
+            System.out.println(tutorRepository.findAll());
 
             insertAppointments(appointmentRepository);
             System.out.println(appointmentRepository.findAll());
@@ -52,14 +55,17 @@ public class SpringDataJpaApplication {
     }
     */
     private void insertUsers(UserRepository repository) {
-        repository.save(new User("johndoe@gmail.com", "Password123$"));
-        repository.save(new User("janedoe@gmail.com", "passWord4#56"));
+      repository.save(new User("johndoe@gmail.com", "Password123$"));
+      repository.save(new User("janedoe@gmail.com", "passWord4#56"));
+      repository.save(new User("cameron12@gmail.com", "passWord4#56", true, false));
+        repository.save(new User("abigail36@gmail.com", "passWord4#56", true, false));
+
     }
 
-//    private void insertTutors(TutorRepository repository) {
-//        repository.save(new Tutor("tutor4u@yahoo.com", "passwoRd123*"));
-//        repository.save(new Tutor("johnsmith@hotmail.com", "qwertyeFjkfe&"));
-//    }
+    private void insertTutors(TutorRepository repository) {
+          repository.save(new Tutor("My name is abigail and I like  teaching Math. ", List.of("Science"), "abigail36@gmail.com", "passWord4#56"));
+
+    }
 
     private void insertAppointments(AppointmentRepository repository) {
         repository.save(new Appointment(1, 2, new Date(2023, 10, 20, 10, 0),
