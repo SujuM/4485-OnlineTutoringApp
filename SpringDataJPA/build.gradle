@@ -25,7 +25,7 @@ dependencies {
     runtimeOnly 'com.h2database:h2:2.1.214'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-mail'
-    implementation 'com.google.guava:guava:31.1-jre'
+    // implementation 'com.google.guava:guava:32.1.2-jre'
     implementation 'javax.validation:validation-api:2.0.1.Final'
     compileOnly 'org.projectlombok:lombok:1.18.28'
     annotationProcessor 'org.projectlombok:lombok:1.18.28'

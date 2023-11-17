@@ -5,7 +5,7 @@ import com.tutoring.springdatajpa.dto.UserLoginRequestDto;
 import com.tutoring.springdatajpa.dto.UserLoginSuccessDto;
 import com.tutoring.springdatajpa.entities.User;
 import com.tutoring.springdatajpa.repositories.UserRepository;
-import com.google.common.cache.LoadingCache;
+//import com.google.common.cache.LoadingCache;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -28,7 +28,8 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final LoadingCache<String, Integer> oneTimePasswordCache;
+    //private final LoadingCache<String, Integer> oneTimePasswordCache;
+    private final HashMap<String, Integer> otpCache;
     private final EmailService emailService;
     public ResponseEntity<?> login(final UserLoginRequestDto userLoginRequestDto) {
         final User user = userRepository.findByUsername(userLoginRequestDto.getUsername()).
@@ -45,11 +46,9 @@ public class UserService {
         User user = userRepository.findByUsername(otpVerificationRequestDto.getUsername())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid username"));
 
-        Integer storedOTP = null;
-        try {
-            storedOTP = oneTimePasswordCache.get(user.getUsername());
-        } catch (ExecutionException e) {
-            log.error("Failed to fetch from OTP cache: {}", e);
+        Integer storedOTP = otpCache.get(user.getUsername());
+        if (storedOTP == null){
+            log.error("Failed to fetch from OTP cache");
             throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
         }
 
@@ -62,7 +61,7 @@ public class UserService {
 
     private void sendOtp(final User user, final String subject) {
         final var otp = new Random().ints(1, 100000, 999999).sum();
-        oneTimePasswordCache.put(user.getUsername(), otp);
+        otpCache.put(user.getUsername(), otp);
 
         CompletableFuture.supplyAsync(() -> {
            emailService.sendEmail(user.getUsername(), subject, "OTP: " + otp);
