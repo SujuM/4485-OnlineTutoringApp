@@ -1,6 +1,8 @@
 package com.tutoring.springdatajpa.http.controllers;
 
+import com.tutoring.springdatajpa.dto.OtpVerificationRequestDto;
 import com.tutoring.springdatajpa.dto.UserLoginRequestDto;
+import com.tutoring.springdatajpa.dto.UserLoginSuccessDto;
 import com.tutoring.springdatajpa.entities.User;
 import com.tutoring.springdatajpa.repositories.UserRepository;
 import com.tutoring.springdatajpa.service.UserService;
@@ -17,6 +19,9 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
+
+
+import org.springframework.http.MediaType;
 
 @RestController
 public class AuthController {
@@ -56,11 +61,18 @@ public class AuthController {
         return result;
     }
 
-    @GetMapping("/login")
+    @PostMapping(value="/login", produces=MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<?> userLoginHandler(
             @RequestBody(required=true) final UserLoginRequestDto userLoginRequestDto) {
         return userService.login(userLoginRequestDto);
+    }
+
+    @PostMapping(value = "/verify-otp", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(value = HttpStatus.OK)
+    public ResponseEntity<UserLoginSuccessDto> otpVerificationHandler(
+            @RequestBody(required = true) final OtpVerificationRequestDto otpVerificationRequestDto) {
+        return userService.verifyOtp(otpVerificationRequestDto);
     }
 
 }
