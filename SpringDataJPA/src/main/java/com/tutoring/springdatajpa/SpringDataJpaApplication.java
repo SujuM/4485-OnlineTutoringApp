@@ -12,6 +12,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @SpringBootApplication
@@ -57,9 +58,9 @@ public class SpringDataJpaApplication {
     }
 
     private void insertAppointments(AppointmentRepository repository) {
-        repository.save(new Appointment(1, 2, new Date(2023, 10, 20, 10, 0),
-                new Date(2023, 10, 20, 11, 0),
-                new Date(2023, 10, 19, 10, 0)));
+//        repository.save(new Appointment(1, 2, new LocalDateTime(2023, 10, 20, 10, 0),
+//                new Date(2023, 10, 20, 11, 0),
+//                new Date(2023, 10, 19, 10, 0)));
     }
 
 }
