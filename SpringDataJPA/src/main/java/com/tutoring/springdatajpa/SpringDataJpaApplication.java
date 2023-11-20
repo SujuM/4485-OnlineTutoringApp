@@ -13,6 +13,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -24,6 +26,17 @@ public class SpringDataJpaApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringDataJpaApplication.class, args);
     }
+
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("*").allowedHeaders("*").allowedMethods("*");
+			}
+		};
+	}
+
 
     @Bean
     public CommandLineRunner run(UserRepository userRepository, TutorRepository tutorRepository, AppointmentRepository appointmentRepository, SubjectListRepository subjectListRepository) {
