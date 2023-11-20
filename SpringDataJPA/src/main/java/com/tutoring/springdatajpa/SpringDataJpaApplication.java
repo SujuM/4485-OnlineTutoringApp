@@ -53,18 +53,29 @@ public class SpringDataJpaApplication {
         repository.save(new Employee("Helen", "Scott"));
         repository.save(new Employee("Mala", "Gupta"));
     }
+
     */
+//    private void insertUsersAndTutors(UserRepository repository, TutorRepository tutorRepository) {
+//        repository.save(new User("johndoe@gmail.com", "Password123$"));
+//        repository.save(new User("janedoe@gmail.com", "passWord4#56"));
+//        repository.save(new User("cameron12@gmail.com", "passWord4#56", true, false));
+//        repository.save(new User("abigail36@gmail.com", "passWord4#56", true, false));
+//        repository.save(new User("tessa24@gmail.com", "passWord4#56", false, true));
+//        repository.save(new User("max456@gmail.com", "passWord4#56", true, true));
+//    }
     private void insertUsers(UserRepository repository) {
       repository.save(new User("johndoe@gmail.com", "Password123$"));
       repository.save(new User("janedoe@gmail.com", "passWord4#56"));
       repository.save(new User("cameron12@gmail.com", "passWord4#56", true, false));
-        repository.save(new User("abigail36@gmail.com", "passWord4#56", true, false));
-
+      repository.save(new User("abigail36@gmail.com", "passWord4#56", true, false));
+      repository.save(new User("tessa24@gmail.com", "passWord4#56", false, true));
+      repository.save(new User("max456@gmail.com", "passWord4#56", true, true));
     }
 
     private void insertTutors(TutorRepository repository) {
-          repository.save(new Tutor("My name is abigail and I like  teaching Math. ", List.of("Science"), "abigail36@gmail.com", "passWord4#56"));
-
+          repository.save(new Tutor("My name is abigail and I like  teaching Math. ", List.of("Science"), "abigail36@gmail.com", "passWord4#56", true, false));
+          repository.save(new Tutor("My name is tessa and I like teaching science. ", List.of("Science"), "tessa24@gmail.com", "passWord4#56", false, true));
+          repository.save(new Tutor("My name is max and I like teaching science. ", List.of("Science"), "max456@gmail.com", "passWord4#56", true, true));
     }
 
     private void insertAppointments(AppointmentRepository repository) {

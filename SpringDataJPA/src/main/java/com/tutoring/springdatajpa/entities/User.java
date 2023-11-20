@@ -24,10 +24,10 @@ public class User implements UserDetails {
     private boolean enabled;
 
     @Column
-    private Boolean isTutor;
+    private Boolean isTutor = false;
 
     @Column
-    private Boolean isCriminal;
+    private Boolean isCriminal = false;
 
     @OneToMany
     private List <User> favoriteTutorList;

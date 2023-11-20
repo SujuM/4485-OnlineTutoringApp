@@ -29,11 +29,12 @@ public class Tutor extends User{
     public Tutor() {
 
     }
-    public Tutor(String aboutMe, List<String> tutorSubjectList, String username, String password)
+    public Tutor(String aboutMe, List<String> tutorSubjectList, String username, String password, Boolean isTutor, Boolean isCriminal)
     {
-        super(username, password);
+        super(username, password, isTutor, isCriminal);
         this.aboutMe = aboutMe;
         this.tutorSubjectList = tutorSubjectList;
+
     }
 
 
