@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55e7c76e-c974-4740-a4ad-48264884d3ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85/storage_v2/_src_/database/MYDB.KlckAA/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85/storage_v2/_src_/database/MYDB.KlckAA/schema/PUBLIC.aaZQjQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/AppUserDetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/EmployeeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/EmployeeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/FavoritesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/SearchTutorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/SpringDataJpaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/SubjectListService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/SubjectNameNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/TutorNameNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/WebSecurityConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/entities/Appointment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/entities/SubjectList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/entities/Tutor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/entities/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/AppointmentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/AuthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/FavoritesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/RegisterRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/SubjectListController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/TutorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/repositories/AppointmentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/repositories/SubjectListRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/repositories/TutorRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/resources/main/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/SpringDataJpaApplication.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SearchTutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SearchTutorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SpringDataJpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SpringDataJpaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Tutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Tutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/TutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/TutorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/myDB.mv.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/myDB.trace.db" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/SpringDataJPA">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/SpringDataJPA">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringDataJPA" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringDataJPA" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringDataJPA" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringDataJPA" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c6e33c61-103a-4012-a517-fc1770dbf9ec" />
+        <option name="url" value="https://github.com/SujuM/4485-OnlineTutoringApp.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/6.1.3/2f6ab7a7f60f6fcc460b68f0dc036bdcdd8bedbb/spring-security-core-6.1.3-sources.jar!/org/springframework/security/core/userdetails/UserDetails.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/6.1.3/2f6ab7a7f60f6fcc460b68f0dc036bdcdd8bedbb/spring-security-core-6.1.3-sources.jar!/org/springframework/security/provisioning/MutableUser.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="r7bhkva0" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2XJisoEOHFW8oSGRI6f1FqcbcQi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Iman&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/imantanzeem/IdeaProjects/4485-OnlineTutoringApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.tutoring.springdatajpa" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tutoring.springdatajpa.http.controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringDataJpaApplication">
+    <configuration name="SpringDataJPA [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SpringDataJPA" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringDataJPA [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SpringDataJPA" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringDataJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="SpringDataJPA.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tutoring.springdatajpa.SpringDataJpaApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutoring.springdatajpa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SpringDataJpaApplication" />
+        <item itemvalue="Gradle.SpringDataJPA [clean]" />
+        <item itemvalue="Gradle.SpringDataJPA [dependencies]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55e7c76e-c974-4740-a4ad-48264884d3ed" name="Changes" comment="" />
+      <created>1698353792772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698353792772</updated>
+      <workItem from="1698353794141" duration="694000" />
+      <workItem from="1698439395290" duration="559000" />
+      <workItem from="1698439986414" duration="4469000" />
+      <workItem from="1698547317205" duration="359000" />
+      <workItem from="1698547704451" duration="207000" />
+      <workItem from="1698684082000" duration="537000" />
+      <workItem from="1698777614116" duration="6742000" />
+      <workItem from="1698943732542" duration="9455000" />
+      <workItem from="1699122537892" duration="8313000" />
+      <workItem from="1699131459579" duration="7711000" />
+      <workItem from="1699464595333" duration="22380000" />
+      <workItem from="1699851521441" duration="1007000" />
+      <workItem from="1699854005585" duration="7649000" />
+      <workItem from="1699932085560" duration="7151000" />
+      <workItem from="1700086945978" duration="612000" />
+      <workItem from="1700087645299" duration="861000" />
+      <workItem from="1700088583873" duration="1813000" />
+      <workItem from="1700157371119" duration="6131000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Tutor.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
