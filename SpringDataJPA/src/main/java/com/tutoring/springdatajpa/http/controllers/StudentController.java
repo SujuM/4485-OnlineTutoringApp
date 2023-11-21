@@ -2,11 +2,11 @@ package com.tutoring.springdatajpa.http.controllers;
 
 //import com.tutoring.springdatajpa.SearchTutorService;
 import com.tutoring.springdatajpa.SearchTutorService;
+import com.tutoring.springdatajpa.entities.Student;
 import com.tutoring.springdatajpa.entities.Tutor;
-import com.tutoring.springdatajpa.entities.User;
+import com.tutoring.springdatajpa.repositories.StudentRepository;
 import com.tutoring.springdatajpa.repositories.TutorRepository;
 import com.tutoring.springdatajpa.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,38 +17,27 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class TutorController {
+public class StudentController {
 
-    private final TutorRepository repository;
+    private final StudentRepository repository;
     private final UserRepository userRepository;
 
-    private final SearchTutorService searchTutorService;
-
-    public TutorController(TutorRepository repository, UserRepository userRepository,SearchTutorService searchTutorService){ //) {
+    public StudentController(StudentRepository repository, UserRepository userRepository){ //) {
 
         this.repository = repository;
         this.userRepository = userRepository;
-        this.searchTutorService = searchTutorService;
     }
 
-    @GetMapping("/tutors")
-    public List<Tutor> showAllTutors() {
-        List<Tutor> result = new ArrayList<Tutor>();
-         this.repository.findAll().forEach(result::add);
+    @GetMapping("/students")
+    public List<Student> showAllStudents() {
+        List<Student> result = new ArrayList<Student>();
+        this.repository.findAll().forEach(result::add);
          return result;
     }
 
-    @GetMapping("/tutors/{id}")
-    public Optional<Tutor> showTutor(@PathVariable long id) {
+    @GetMapping("/students/{id}")
+    public Optional<Student> showStudent(@PathVariable long id) {
         return this.repository.findById(id);
     }
-
-    @GetMapping("/search")
-    public List <Tutor> searchTutorsBySubject(@RequestParam("name") String name)
-    {
-        return searchTutorService.searchForTutorsBySubjectNames(name);
-    }
-
-
 
 }

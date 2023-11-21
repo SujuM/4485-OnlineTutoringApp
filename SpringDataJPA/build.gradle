@@ -31,6 +31,14 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.28'
 }
 
+task deleteH2(type: Exec) {
+	commandLine './deleteH2'
+}
+
+bootRun {
+	dependsOn deleteH2
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }

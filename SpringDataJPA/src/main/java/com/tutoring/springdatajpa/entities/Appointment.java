@@ -1,9 +1,7 @@
 package com.tutoring.springdatajpa.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -13,39 +11,79 @@ public class Appointment {
     @GeneratedValue
     @Column(name = "id")
     private int id;
-    @Column(name = "tutor_id")
-    private int tutor_id;
-    @Column(name = "student_id")
-    private int student_id;
 
-    @Column(name = "start_time")
-    private Date start_time;
+    @JsonIgnore
+    @ManyToOne(optional=false)
+    private Tutor tutor;
 
-    @Column(name = "end_time")
-    private Date end_time;
-    @Column(name = "book_time")
-    private Date book_time;
-    @Column(name = "canceled")
-    private boolean canceled;
+    @JsonIgnore
+    @ManyToOne(optional=true)
+    private Student student;
+
+    @Column
+    private Date startTime;
+
+    @Column
+    private Date endTime;
+
+    @Enumerated(EnumType.STRING)
+    @Column
+    private AppointmentStatus status;
+
+    public enum AppointmentStatus {
+        AVAILABLE,
+        SCHEDULED,
+        CONFIRMED,
+        FINISHED,
+        CANCELED
+    }
 
 
     public Appointment() {}
 
-    public Appointment(int tutor_id, int student_id, Date start_time, Date end_time, Date book_time) {
-        this.tutor_id = tutor_id;
-        this.student_id = student_id;
-        this.start_time = start_time;
-        this.end_time = end_time;
-        this.book_time = book_time;
-        this.canceled = false;
+    public Appointment(Tutor tutor, Date start_time, Date end_time) {
+        this.tutor = tutor;
+        this.startTime = start_time;
+        this.endTime = end_time;
+
+        setStatus(AppointmentStatus.AVAILABLE);
     }
+
 
     public int getId() {
         return id;
     }
-    public void cancel() {
-        this.canceled = true;
+
+    public Tutor getTutor() {
+        return tutor;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+        this.setStatus(AppointmentStatus.SCHEDULED);
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public AppointmentStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(AppointmentStatus status) {
+        this.status = status;
     }
 }
+
+
 
 
