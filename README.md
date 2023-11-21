@@ -29,3 +29,37 @@ Check this link, https://www.jetbrains.com/idea/guide/tutorials/getting-started-
 Use the following URL for testing API call. (While running the app)
 http://localhost:8080/swagger-ui/index.html
 
+
+
+
+
+Table User 
+DTYPE: students, tutors
+
+
+Appointment
+
+create appointment
+ - tutor : create their available appointment. updateStatus: available
+
+setStudent: book an appointment
+- appointment.updateStatus: scheduled
+
+getStatus: Check the status of appointment.
+
+For frontend,
+ - if appointment status is AVAILABLE: show all available appointments that are available by each tutor to students.
+ - SCHEDULED: show all scheduled appointments to student
+     - For upcoming appointment: if appointmentStatus is SCHEDULED, show a list of appointments.
+ - COMPLETED: calculate all completed hours for tutor/student.
+
+
+
+****************
+Remaining work,
+
+appointment.updateStatus - COMPLETED
+calculateDuration of an appointment
+additional post endpoint that is related to appointment.
+
+
