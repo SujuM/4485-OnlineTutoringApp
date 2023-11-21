@@ -9,5 +9,5 @@ import lombok.extern.jackson.Jacksonized;
 @Jacksonized
 public class OtpVerificationRequestDto {
     private final String username;
-    private final Integer OTP;
+    private final Integer otp;
 }

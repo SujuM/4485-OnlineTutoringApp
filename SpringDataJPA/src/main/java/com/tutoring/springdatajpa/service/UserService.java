@@ -52,7 +52,7 @@ public class UserService {
             throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
         }
 
-        if(storedOTP.equals(otpVerificationRequestDto.getOTP()))
+        if(storedOTP.equals(otpVerificationRequestDto.getOtp()))
             return ResponseEntity.ok().build();
 
         else
