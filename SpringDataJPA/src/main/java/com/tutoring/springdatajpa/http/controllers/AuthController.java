@@ -75,6 +75,11 @@ public class AuthController {
         return userService.verifyOtp(otpVerificationRequestDto);
     }
 
+    public boolean checkPassword(String password)
+    {
+        return(password.matches("^(?=.*[0-9])" + "(?=.*[a-z])(?=.*[A-Z])" + "(?=.*[@#$%^&+=])" + "(?=\\S+$).{8,20}$"));
+    }
+
 }
 
 class RegisterRequest {
