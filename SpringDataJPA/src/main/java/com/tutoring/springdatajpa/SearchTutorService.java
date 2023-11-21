@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 @Service
-public class SearchTutorService
+public class  SearchTutorService
 {
     private final TutorRepository tutorRepository;
 

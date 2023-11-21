@@ -1,5 +1,6 @@
 package com.tutoring.springdatajpa.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.format.DateTimeFormatter;
@@ -17,7 +18,8 @@ public class Tutor extends User{
     @ElementCollection
     private List<String> tutorSubjectList;
 
-
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "tutor")
+    private List<Appointment> appointments;
 //    @Column(nullable = false)
 //    private String username;
 //    @Column
@@ -65,7 +67,16 @@ public class Tutor extends User{
         }
     }
 
-//    @Column(name = "email")
+    public List<Appointment> getAppointments() {
+        return appointments;
+    }
+
+    public void addAppointment(Appointment appointment)
+    {
+        appointments.add(appointment);
+    }
+
+    //    @Column(name = "email")
 //    private String email;
 //    @Column(name = "password")
 //    private String password;
