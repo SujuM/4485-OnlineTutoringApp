@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55e7c76e-c974-4740-a4ad-48264884d3ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85/storage_v2/_src_/database/MYDB.KlckAA/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85/storage_v2/_src_/database/MYDB.KlckAA/schema/PUBLIC.aaZQjQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -20,41 +14,11 @@
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/AppUserDetailsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/EmployeeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/EmployeeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/FavoritesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/SearchTutorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/SpringDataJpaApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/SubjectListService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/SubjectNameNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/TutorNameNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/WebSecurityConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/entities/Appointment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/entities/SubjectList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/entities/Tutor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/AppointmentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/FavoritesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/RegisterRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/SubjectListController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/TutorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/repositories/AppointmentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/repositories/SubjectListRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/repositories/TutorRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/repositories/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/resources/main/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/SpringDataJpaApplication.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SearchTutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SearchTutorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SpringDataJpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SpringDataJpaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Tutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Tutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/TutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/TutorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/myDB.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/myDB.trace.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/TutorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/TutorRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,6 +238,15 @@
       <workItem from="1700088583873" duration="1813000" />
       <workItem from="1700157371119" duration="6131000" />
     </task>
+    <task id="LOCAL-00001" summary="connected appointment- tutor and student. added get endpoint.">
+      <option name="closed" value="true" />
+      <created>1700537488688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700537488688</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,15 +263,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Tutor.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="connected appointment- tutor and student. added get endpoint." />
+    <option name="LAST_COMMIT_MESSAGE" value="connected appointment- tutor and student. added get endpoint." />
   </component>
 </project>

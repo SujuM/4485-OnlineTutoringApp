@@ -3,6 +3,8 @@ package com.tutoring.springdatajpa;
 
 import com.tutoring.springdatajpa.entities.*;
 import com.tutoring.springdatajpa.repositories.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +16,7 @@ import java.util.*;
 
 @SpringBootApplication
 public class SpringDataJpaApplication {
+    Logger logger = LoggerFactory.getLogger(AppUserDetailsService.class);
 
     public static void main(String[] args) {
         SpringApplication.run(SpringDataJpaApplication.class, args);
@@ -38,22 +41,15 @@ public class SpringDataJpaApplication {
             //System.out.println(repository.findAll());
             //System.out.println(repository.findEmployeesByLastNameContaining(" "));
             insertUsers(userRepository);
-            System.out.println(userRepository.findAll());
 
             insertStudent(studentRepository);
 
 
             insertTutors(tutorRepository);
-            System.out.println(tutorRepository.findAll());
 
             insertAppointments(appointmentRepository, tutorRepository, studentRepository);
-            System.out.println(appointmentRepository.findAll());
 
             insertSubjectList(subjectListRepository);
-            System.out.println(subjectListRepository.findAll());
-
-            Tutor tutor = tutorRepository.findById(7L).get();
-            System.out.println(tutor.getAppointments());
         };
     }
 
@@ -71,28 +67,19 @@ public class SpringDataJpaApplication {
 
 
     private void insertAppointments(AppointmentRepository appointmentRepository, TutorRepository tutorRepository, StudentRepository studentRepository) {
-        Date startTime = new GregorianCalendar(2023, Calendar.FEBRUARY, 12, 11, 00).getTime();
-        Date endTime = new GregorianCalendar(2023, Calendar.FEBRUARY, 12, 12, 00).getTime();
-
-
+        Date startTime = new GregorianCalendar(2023, Calendar.FEBRUARY, 13, 11, 00).getTime();
+        Date endTime = new GregorianCalendar(2023, Calendar.FEBRUARY, 13, 12, 00).getTime();
+        Student student = studentRepository.findFirstByOrderByIdDesc();
+        Tutor tutor = tutorRepository.findFirstByOrderByIdDesc();
         // Create new appointment with a tutor whose ID is 7
-        Appointment appointment = new Appointment(tutorRepository.findById(7L).get(), startTime, endTime);
-
+        Appointment appointment = new Appointment(tutor, startTime, endTime);
         appointmentRepository.save(appointment);
 
-
-        Tutor tutor = tutorRepository.findById(7L).get();
         // Add an appointment to the list of appointments for tutor.
-        tutor.addAppointment(appointment);
-
-        tutorRepository.save(tutor);
-
-        Student student = studentRepository.findById(353L).get();
-
-        // student books an appointment.
-        appointment.setStudent(student);
-        // Add an appointment to the list of scheduled appointments for student.
-        student.addAppointment(appointment);
+//        appointment.setStudent(student);
+//        appointmentRepository.save(appointment);
+//
+//        logger.warn(student.getAppointments().toString());
     }
     private void insertSubjectList(SubjectListRepository repository) {
         repository.save(new SubjectList(1000, "Math", "Abigail Doe", 3294));

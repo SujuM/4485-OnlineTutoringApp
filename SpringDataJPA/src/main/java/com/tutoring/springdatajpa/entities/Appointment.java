@@ -13,11 +13,11 @@ public class Appointment {
     private int id;
 
     @JsonIgnore
-    @ManyToOne(optional=false)
+    @ManyToOne(optional=false, cascade = CascadeType.MERGE)
     private Tutor tutor;
 
     @JsonIgnore
-    @ManyToOne(optional=true)
+    @ManyToOne(cascade = CascadeType.MERGE)
     private Student student;
 
     @Column
@@ -43,6 +43,7 @@ public class Appointment {
 
     public Appointment(Tutor tutor, Date start_time, Date end_time) {
         this.tutor = tutor;
+        tutor.addAppointment(this);
         this.startTime = start_time;
         this.endTime = end_time;
 
@@ -61,6 +62,7 @@ public class Appointment {
     public void setStudent(Student student) {
         this.student = student;
         this.setStatus(AppointmentStatus.SCHEDULED);
+        student.addAppointment(this);
     }
 
     public Student getStudent() {
