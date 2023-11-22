@@ -61,6 +61,19 @@ public class AuthController {
         return new ResponseEntity<>("registration unsuccessful", HttpStatus.NOT_ACCEPTABLE);
     }
 
+    @PostMapping("/{email}/auth/change-password")
+    public ResponseEntity<String> register(@PathVariable String email, @RequestBody ChangePassRequest request)
+    {
+        User user = userRepository.findByUsernameAndPassword(email,request.currentPassword);
+        if(passwordEncoder.encode(request.currentPassword).equals(user.getPassword()))
+        {
+            user.setPassword(passwordEncoder.encode(request.newPassword));
+            this.userRepository.save(user);
+            return new ResponseEntity<>("password change was a success", HttpStatus.OK);
+        }
+        return new ResponseEntity<>("password change was unsuccessful", HttpStatus.NOT_ACCEPTABLE);
+    }
+
     @GetMapping("/users")
     public List<User> index2() {
         List<User> result = new ArrayList<User>();
@@ -93,4 +106,11 @@ class RegisterRequest {
     public String email;
     @NotBlank
     public String password;
+}
+
+class ChangePassRequest {
+    @NotBlank
+    public String currentPassword;
+    @NotBlank
+    public String newPassword;
 }
