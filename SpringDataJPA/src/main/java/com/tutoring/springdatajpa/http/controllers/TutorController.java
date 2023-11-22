@@ -2,15 +2,12 @@ package com.tutoring.springdatajpa.http.controllers;
 
 //import com.tutoring.springdatajpa.SearchTutorService;
 import com.tutoring.springdatajpa.SearchTutorService;
+import com.tutoring.springdatajpa.entities.Appointment;
 import com.tutoring.springdatajpa.entities.Tutor;
-import com.tutoring.springdatajpa.entities.User;
+import com.tutoring.springdatajpa.repositories.AppointmentRepository;
 import com.tutoring.springdatajpa.repositories.TutorRepository;
 import com.tutoring.springdatajpa.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +18,15 @@ public class TutorController {
 
     private final TutorRepository repository;
     private final UserRepository userRepository;
+    private final AppointmentRepository appointmentRepository;
 
     private final SearchTutorService searchTutorService;
 
-    public TutorController(TutorRepository repository, UserRepository userRepository,SearchTutorService searchTutorService){ //) {
+    public TutorController(TutorRepository repository, UserRepository userRepository, AppointmentRepository appointmentRepository, SearchTutorService searchTutorService){ //) {
 
         this.repository = repository;
         this.userRepository = userRepository;
+        this.appointmentRepository = appointmentRepository;
         this.searchTutorService = searchTutorService;
     }
 
@@ -41,6 +40,14 @@ public class TutorController {
     @GetMapping("/tutors/{id}")
     public Optional<Tutor> showTutor(@PathVariable long id) {
         return this.repository.findById(id);
+    }
+
+    @PutMapping("/tutors/{id}/appointments/{app_id}")
+    public Appointment updateAppointmentStatus(@PathVariable("id") long id, @PathVariable("app_id") long appointmentID) {
+        Appointment appointment = appointmentRepository.findById(appointmentID).get();
+        appointment.setStatus(Appointment.AppointmentStatus.FINISHED);
+        appointmentRepository.save(appointment);
+        return appointment;
     }
 
     @GetMapping("/search")
