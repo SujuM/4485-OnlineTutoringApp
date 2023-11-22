@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55e7c76e-c974-4740-a4ad-48264884d3ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3282f553-df39-49d5-b353-e925919eec85.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -13,12 +12,8 @@
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SpringDataJpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/SpringDataJpaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/TutorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/repositories/TutorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Tutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/entities/Tutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/AppointmentController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700537488688</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated student-appointment mapping.">
+      <option name="closed" value="true" />
+      <created>1700630749595</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700630749595</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +268,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="connected appointment- tutor and student. added get endpoint." />
-    <option name="LAST_COMMIT_MESSAGE" value="connected appointment- tutor and student. added get endpoint." />
+    <MESSAGE value="updated student-appointment mapping." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated student-appointment mapping." />
   </component>
 </project>
