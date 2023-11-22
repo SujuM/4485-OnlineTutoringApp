@@ -9,14 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class AuthController {
@@ -48,6 +46,21 @@ public class AuthController {
         }
         return new ResponseEntity<>("registration unsuccessful", HttpStatus.NOT_ACCEPTABLE);
     }
+    @PostMapping("{email}/auth/change-password")
+    public ResponseEntity<String> changePassword(@PathVariable String email, @RequestBody ChangePassRequest request)
+    {
+        User user = userRepository.findByUsernameAndPassword(email, request.currentPassword);
+
+        if(passwordEncoder.encode(request.currentPassword).equals(user.getPassword()))
+        {
+            user.setPassword(passwordEncoder.encode(request.newPassword));
+            this.userRepository.save(user);
+            return new ResponseEntity<>("password change was successful", HttpStatus.OK);
+        }
+        return new ResponseEntity<>("password change was unsuccessful", HttpStatus.NOT_ACCEPTABLE);
+    }
+
+
 
     @GetMapping("/users")
     public List<User> index2() {
@@ -66,4 +79,11 @@ class RegisterRequest {
     public String email;
     @NotBlank
     public String password;
+}
+
+class ChangePassRequest {
+    @NotBlank
+    public String currentPassword;
+    @NotBlank
+    public String newPassword;
 }
