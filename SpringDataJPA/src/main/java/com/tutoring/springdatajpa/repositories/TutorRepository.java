@@ -14,6 +14,7 @@ import java.util.List;
 public interface TutorRepository extends CrudRepository<Tutor, Long>  {
 //    List<Employee> findEmployeeByLastNameContaining(String str);
 
+    Tutor findFirstByOrderByIdDesc();
     List<Tutor> findUsersByIdContaining(String str);
 
     List<Tutor> searchTutorBySubjectName(String subject);

@@ -24,6 +24,4 @@ public class Student extends User{
     {
         appointments.add(appointment);
     }
-
-
 }

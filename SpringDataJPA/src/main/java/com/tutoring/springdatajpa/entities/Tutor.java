@@ -39,11 +39,6 @@ public class Tutor extends User{
 
     }
 
-
-//    public void setUsername(String username) {
-//        this.username = username;
-//    }
-
     public String getAboutMe(){return aboutMe;}
     public List<String> getAvailableHours(){return availableHours;}
     public void setSubjectList(List <String> tutorSubjectList){this.tutorSubjectList=tutorSubjectList;}
@@ -75,43 +70,4 @@ public class Tutor extends User{
     {
         appointments.add(appointment);
     }
-
-    //    @Column(name = "email")
-//    private String email;
-//    @Column(name = "password")
-//    private String password;
-//
-//    @Column(name = "totalhours")
-//    private int totalhours;
-//
-//    @Column(name = "info")
-//    private int info;
-//
-//    public Tutor() {
-//
-//    }
-//
-//    public Tutor(String email, String password) {
-//        this.email = email;
-//        this.password = password;
-//    }
-//
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public String getPassword() {
-//        return password;
-//    }
-//
-//    public int getTotalHours() {
-//        return totalhours;
-//    }
-//    public int getInfo() {
-//        return info;
-//    }
 }
