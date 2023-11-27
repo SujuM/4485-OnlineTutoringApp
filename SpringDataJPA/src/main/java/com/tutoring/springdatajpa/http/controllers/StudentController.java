@@ -1,16 +1,12 @@
 package com.tutoring.springdatajpa.http.controllers;
 
 //import com.tutoring.springdatajpa.SearchTutorService;
-import com.tutoring.springdatajpa.SearchTutorService;
+import com.tutoring.springdatajpa.entities.Appointment;
 import com.tutoring.springdatajpa.entities.Student;
-import com.tutoring.springdatajpa.entities.Tutor;
+import com.tutoring.springdatajpa.repositories.AppointmentRepository;
 import com.tutoring.springdatajpa.repositories.StudentRepository;
-import com.tutoring.springdatajpa.repositories.TutorRepository;
 import com.tutoring.springdatajpa.repositories.UserRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,10 +18,14 @@ public class StudentController {
     private final StudentRepository repository;
     private final UserRepository userRepository;
 
-    public StudentController(StudentRepository repository, UserRepository userRepository){ //) {
+    private final AppointmentRepository appointmentRepository;
+
+
+    public StudentController(StudentRepository repository, UserRepository userRepository, AppointmentRepository appointmentRepository){ //) {
 
         this.repository = repository;
         this.userRepository = userRepository;
+        this.appointmentRepository = appointmentRepository;
     }
 
     @GetMapping("/students")
@@ -38,6 +38,14 @@ public class StudentController {
     @GetMapping("/students/{id}")
     public Optional<Student> showStudent(@PathVariable long id) {
         return this.repository.findById(id);
+    }
+
+    @PutMapping("/students/{id}/appointments/{app_id}")
+    public Appointment updateAppointmentStatus(@PathVariable("id") long id, @PathVariable("app_id") long appointmentID) {
+        Appointment appointment = appointmentRepository.findById(appointmentID).get();
+        appointment.setStatus(Appointment.AppointmentStatus.CONFIRMED);
+        appointmentRepository.save(appointment);
+        return appointment;
     }
 
 }
