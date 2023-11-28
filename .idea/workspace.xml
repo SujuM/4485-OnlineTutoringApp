@@ -6,6 +6,42 @@
   <component name="ChangeListManager">
     <list default="true" id="55e7c76e-c974-4740-a4ad-48264884d3ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/TutorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/build/classes/java/main/com/tutoring/springdatajpa/http/controllers/TutorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/AppUserDetailsService.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/Appointment$AppointmentStatus.class.uniqueId23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/Appointment.class.uniqueId14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/AppointmentController$StoreAppointmentRequest.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/AppointmentController$UpdateAppointmentRequest.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/AppointmentController.class.uniqueId10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/AppointmentRepository.class.uniqueId16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/AuthController.class.uniqueId24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/ChangePassRequest.class.uniqueId18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/FavoritesController.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/FavoritesService.class.uniqueId20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/RegisterRequest.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/SearchTutorService.class.uniqueId11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/SpringDataJpaApplication$1.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/SpringDataJpaApplication.class.uniqueId17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/Student.class.uniqueId22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/StudentController.class.uniqueId12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/StudentRepository.class.uniqueId21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/SubjectListController.class.uniqueId15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/Tutor.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/TutorController.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/TutorRepository.class.uniqueId9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/User.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/UserRepository.class.uniqueId19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/compileTransaction/stash-dir/UserService.class.uniqueId13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/TutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringDataJPA/src/main/java/com/tutoring/springdatajpa/http/controllers/TutorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/myDB.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/myDB.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,28 +61,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SpringDataJPA" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SpringDataJPA" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SpringDataJPA" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SpringDataJPA" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -69,11 +84,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -112,7 +127,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Iman&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/imantanzeem/IdeaProjects/4485-OnlineTutoringApp&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -151,7 +166,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="SpringDataJPA [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -173,7 +188,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="SpringDataJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -193,8 +208,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringDataJpaApplication" />
-        <item itemvalue="Gradle.SpringDataJPA [clean]" />
         <item itemvalue="Gradle.SpringDataJPA [dependencies]" />
+        <item itemvalue="Gradle.SpringDataJPA [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +239,8 @@
       <workItem from="1700087645299" duration="861000" />
       <workItem from="1700088583873" duration="1813000" />
       <workItem from="1700157371119" duration="6131000" />
+      <workItem from="1700957508834" duration="3785000" />
+      <workItem from="1701111808432" duration="16694000" />
     </task>
     <task id="LOCAL-00001" summary="connected appointment- tutor and student. added get endpoint.">
       <option name="closed" value="true" />
@@ -241,23 +258,7 @@
       <option name="project" value="LOCAL" />
       <updated>1700630749595</updated>
     </task>
-    <task id="LOCAL-00003" summary="updated get method. added post/put methods for appointment">
-      <option name="closed" value="true" />
-      <created>1700634916151</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1700634916151</updated>
-    </task>
-    <task id="LOCAL-00004" summary="student - update appointment w/ CONFIRMED, tutor - update appointment w/ FINISHED">
-      <option name="closed" value="true" />
-      <created>1700672616966</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1700672616966</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,8 +278,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="connected appointment- tutor and student. added get endpoint." />
     <MESSAGE value="updated student-appointment mapping." />
-    <MESSAGE value="updated get method. added post/put methods for appointment" />
-    <MESSAGE value="student - update appointment w/ CONFIRMED, tutor - update appointment w/ FINISHED" />
-    <option name="LAST_COMMIT_MESSAGE" value="student - update appointment w/ CONFIRMED, tutor - update appointment w/ FINISHED" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated student-appointment mapping." />
   </component>
 </project>

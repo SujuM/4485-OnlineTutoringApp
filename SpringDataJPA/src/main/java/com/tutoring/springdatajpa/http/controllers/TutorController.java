@@ -50,11 +50,11 @@ public class TutorController {
         return appointment;
     }
 
-    @GetMapping("/search")
-    public List <Tutor> searchTutorsBySubject(@RequestParam("name") String name)
-    {
-        return searchTutorService.searchForTutorsBySubjectNames(name);
-    }
+//    @GetMapping("/search")
+//    public List <Tutor> searchTutorsBySubject(@RequestParam("name") String name)
+//    {
+//        return searchTutorService.searchForTutorsBySubjectNames(name);
+//    }
 
 
 
