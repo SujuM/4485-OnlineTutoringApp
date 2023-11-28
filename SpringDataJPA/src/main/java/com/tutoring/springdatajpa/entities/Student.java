@@ -12,8 +12,8 @@ public class Student extends User{
     public Student() {
     }
 
-    public Student(String username, String password) {
-        super(username, password);
+    public Student(String firstName, String lastName, String username, String password) {
+        super(firstName, lastName, username, password);
     }
 
     public List<Appointment> getAppointments() {

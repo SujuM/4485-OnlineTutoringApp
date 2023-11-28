@@ -17,6 +17,9 @@ public class Tutor extends User{
     private List<String> availableHours;
     @ElementCollection
     private List<String> tutorSubjectList;
+    @Lob
+    @Column
+    private byte [] profilePicture;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "tutor")
     private List<Appointment> appointments;
@@ -31,9 +34,9 @@ public class Tutor extends User{
     public Tutor() {
 
     }
-    public Tutor(String aboutMe, List<String> tutorSubjectList, String username, String password, Boolean isTutor, Boolean isCriminal)
+    public Tutor(String aboutMe, List<String> tutorSubjectList, String username, String password, Boolean isTutor, Boolean isCriminal, String firstName, String lastName)
     {
-        super(username, password, isTutor, isCriminal);
+        super(firstName, lastName, username, password, isTutor, isCriminal);
         this.aboutMe = aboutMe;
         this.tutorSubjectList = tutorSubjectList;
 
@@ -43,6 +46,15 @@ public class Tutor extends User{
     public List<String> getAvailableHours(){return availableHours;}
     public void setSubjectList(List <String> tutorSubjectList){this.tutorSubjectList=tutorSubjectList;}
     public List<String> getSubjectList(){return tutorSubjectList;}
+
+    public void setProfilePicture(byte[] profilePicture) {
+        this.profilePicture = profilePicture;
+    }
+
+    public byte[] getProfilePicture() {
+        return profilePicture;
+    }
+
     public void addSubjectToSubjectList(String subject)
     {
         if(tutorSubjectList == null)

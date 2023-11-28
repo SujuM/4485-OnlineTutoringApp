@@ -46,23 +46,29 @@ public class SpringDataJpaApplication {
 
 
             insertTutors(tutorRepository);
+            //FavoritesService.addTutorToFavoriteList("johndoe@gmail.com","abigail36@gmail.com");
 
             insertAppointments(appointmentRepository, tutorRepository, studentRepository);
 
             insertSubjectList(subjectListRepository);
+
         };
+
     }
 
     private void insertUsers(UserRepository repository) {
       repository.save(new User("johndoe@gmail.com", "Password123$"));
+        repository.save(new User("John", "Doe", "johndoe@gmail.com", "Password123$", false, false));
+        repository.save(new User("Cal", "Henry", "calhenry@gmail.com", "Password123$", false, false));
     }
 
     private void insertStudent(StudentRepository repository) {
-        repository.save(new Student("student1@gmail.com", "Password123$"));
+        repository.save(new Student("Cameron", "Fuller","student1@gmail.com", "Password123$"));
     }
 
     private void insertTutors(TutorRepository repository) {
-          repository.save(new Tutor("My name is abigail and I like  teaching Math. ", List.of("Science"), "abigail36@gmail.com", "passWord4#56", true, false));
+          repository.save(new Tutor("My name is tara and I like  teaching Math. ", List.of("Math"), "tara_warren@gmail.com", "passWord4#56", true, false, "Tara", "Warren"));
+          repository.save(new Tutor("My name is conrad and I like  teaching Science. ", List.of("Science"), "conrad_hawkins@gmail.com", "passWord4#56", true, false, "Conrad", "Hawkins"));
     }
 
 
@@ -82,8 +88,8 @@ public class SpringDataJpaApplication {
 //        logger.warn(student.getAppointments().toString());
     }
     private void insertSubjectList(SubjectListRepository repository) {
-        repository.save(new SubjectList(1000, "Math", "Abigail Doe", 3294));
-        repository.save(new SubjectList(1001, "Science", "Tessa Warren", 8774));
+        repository.save(new SubjectList(1000, "Math", "Abigail","Doe" ,3294));
+        repository.save(new SubjectList(1001, "Science", "Tessa", "Warren", 8774));
     }
 
 }

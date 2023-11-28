@@ -21,29 +21,29 @@ public class SubjectListController
             this.repository = repository;
         }
 
-        @GetMapping("/searchTutor")
-        public List<Tutor> searchTutorsBySubject(@RequestParam String subject)
-        {
-            return searchTutorService.searchForTutorsBySubjectNames(subject);
-        }
+//        @GetMapping("/searchTutor")
+//        public List<Tutor> searchTutorsBySubject(@RequestParam String subject)
+//        {
+//            return searchTutorService.searchForTutorsBySubjectNames(subject);
+//        }
 
-        @PostMapping("/{tutorName}/addSubject")
-        public void addSubjectToSubjectList(@PathVariable String tutorName, @RequestParam String subject)
-        {
-            searchTutorService.addSubjectToSubjectList(tutorName,subject);
-        }
+//        @PostMapping("/{tutorName}/addSubject")
+//        public void addSubjectToSubjectList(@PathVariable String tutorName, @RequestParam String subject)
+//        {
+//            searchTutorService.addSubjectToSubjectList(tutorName,subject);
+//        }
 
-        @PostMapping("/{tutorName}/removeSubject")
-        public void removeSubjectToSubjectList(@PathVariable String tutorName, @RequestParam String subject)
-        {
-            searchTutorService.removeSubjectToSubjectList(tutorName, subject);
-        }
+//        @PostMapping("/{tutorName}/removeSubject")
+//        public void removeSubjectToSubjectList(@PathVariable String tutorName, @RequestParam String subject)
+//        {
+//            searchTutorService.removeSubjectToSubjectList(tutorName, subject);
+//        }
 
-        @GetMapping("/{tutorName}/subjects")
-        public List<String> findSubjectsByTutorName(@PathVariable String tutorName)
-        {
-            return searchTutorService.searchForSubjectsByTutorName(tutorName);
-        }
+//        @GetMapping("/{firstName}/{lastName}/subjects")
+//        public List<String> findSubjectsByFirstAndLastName(@PathVariable String firstName, @PathVariable String lastName)
+//        {
+//            return searchTutorService.searchForSubjectsByFirstAndLastName(firstName, lastName);
+//        }
 
         @GetMapping("/SubjectList")
         public List<SubjectList> index() {

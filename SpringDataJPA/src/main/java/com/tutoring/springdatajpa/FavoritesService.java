@@ -1,6 +1,8 @@
 package com.tutoring.springdatajpa;
 
+import com.tutoring.springdatajpa.entities.Tutor;
 import com.tutoring.springdatajpa.entities.User;
+import com.tutoring.springdatajpa.repositories.TutorRepository;
 import com.tutoring.springdatajpa.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -10,15 +12,17 @@ import java.util.List;
 public class FavoritesService
 {
     private final UserRepository userRepository;
+    private final TutorRepository tutorRepository;
 
-    public FavoritesService(UserRepository userRepository)
+    public FavoritesService(UserRepository userRepository, TutorRepository tutorRepository)
     {
         this.userRepository = userRepository;
+        this.tutorRepository = tutorRepository;
     }
 
-    public List<User> getFavoritesList(String studentUsername)
+    public List<Tutor> getFavoritesList(int studentId)
     {
-        User student = userRepository.findByUsernameAndIsTutor(studentUsername, false);
+        User student = userRepository.findById(studentId);
         if(student != null)
         {
             return student.getFavoriteTutorList();
@@ -30,10 +34,10 @@ public class FavoritesService
         }
     }
 
-    public void addTutorToFavoriteList(String studentUsername, String tutorUsername)
+    public void addTutorToFavoriteList(int studentId, int tutorId)
     {
-        User student = userRepository.findByUsernameAndIsTutor(studentUsername, false);
-        User tutor = userRepository.findByUsernameAndIsTutor(tutorUsername, true);
+        User student = userRepository.findById(studentId);
+        Tutor tutor = tutorRepository.findById(tutorId);
         if(student != null && tutor != null)
         {
             student.addTutorToFavorites(tutor);
@@ -46,10 +50,10 @@ public class FavoritesService
 
     }
 
-    public void removeTutorFromFavoriteList(String studentUsername, String tutorUsername)
+    public void removeTutorFromFavoriteList(int studentId, int tutorId)
     {
-        User student = userRepository.findByUsernameAndIsTutor(studentUsername, false);
-        User tutor = userRepository.findByUsernameAndIsTutor(tutorUsername, true);
+        User student = userRepository.findById(studentId);
+        Tutor tutor = tutorRepository.findById(tutorId);
         if(student != null && tutor != null)
         {
             student.removeTutorFromFavorites(tutor);

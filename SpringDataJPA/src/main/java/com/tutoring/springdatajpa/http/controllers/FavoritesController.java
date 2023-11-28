@@ -1,12 +1,14 @@
 package com.tutoring.springdatajpa.http.controllers;
 
 import com.tutoring.springdatajpa.FavoritesService;
+import com.tutoring.springdatajpa.entities.Tutor;
 import com.tutoring.springdatajpa.entities.User;
 import com.tutoring.springdatajpa.repositories.UserRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
@@ -18,23 +20,45 @@ public class FavoritesController
         this.favoritesService = favoritesService;
     }
 
-    @PostMapping("/{studentUsername}/add/{tutorUsername}")
-    public String addTutorToFavoritesList(@PathVariable String studentUsername, @PathVariable String tutorUsername)
+    @PostMapping("/users/{studentId}/favorites/add")
+    public ResponseEntity<String> addTutorToFavoritesList(@PathVariable int studentId, @RequestParam int tutorId)
     {
-        favoritesService.addTutorToFavoriteList(studentUsername,tutorUsername);
-        return "Tutor was added to favorites list";
+        try
+        {
+            favoritesService.addTutorToFavoriteList(studentId,tutorId);
+            return ResponseEntity.ok("Tutor was added to favorites list");
+        }
+        catch(Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Unable to add tutor");
+        }
     }
 
-    @PostMapping("/{studentUsername}/remove/{tutorUsername}")
-    public String removeTutorToFavoritesList(@PathVariable String studentUsername, @PathVariable String tutorUsername)
+    @DeleteMapping("/users/{studentId}/favorites/remove")
+    public ResponseEntity<String> removeTutorToFavoritesList(@PathVariable int studentId, @RequestParam int tutorId)
     {
-        favoritesService.removeTutorFromFavoriteList(studentUsername,tutorUsername);
-        return "Tutor was removed to favorites list";
+        try
+        {
+            favoritesService.removeTutorFromFavoriteList(studentId,tutorId);
+            return ResponseEntity.ok("Tutor was removed from favorites list");
+        }
+        catch(Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Unable to remove tutor");
+        }
     }
 
-    @GetMapping
-    public List<User> getFavoritesList(@PathVariable String studentUsername)
+    @GetMapping("/users/{studentId}/favorites")
+    public List<Tutor> getFavoritesList(@PathVariable int studentId)
     {
-        return favoritesService.getFavoritesList(studentUsername);
+        return favoritesService.getFavoritesList(studentId);
     }
 }
+//class TutorRequest {
+//    @NotBlank
+//    public String firstName;
+//    @NotBlank
+//    public String lastName;
+//    @Email
+//    public String email;
+//    @NotBlank
+//    public String password;
+//}

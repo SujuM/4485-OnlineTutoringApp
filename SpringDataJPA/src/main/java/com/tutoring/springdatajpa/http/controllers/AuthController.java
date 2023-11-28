@@ -54,7 +54,7 @@ public class AuthController {
 
         if(checkPassword(request.password))
         {
-            User user = new User(request.email, passwordEncoder.encode(request.password));
+            User user = new User(request.firstName, request.lastName, request.email, passwordEncoder.encode(request.password));
             this.userRepository.save(user);
             return new ResponseEntity<>("registration success", HttpStatus.OK);
         }
@@ -102,6 +102,10 @@ public class AuthController {
 }
 
 class RegisterRequest {
+    @NotBlank
+    public String firstName;
+    @NotBlank
+    public String lastName;
     @Email
     public String email;
     @NotBlank

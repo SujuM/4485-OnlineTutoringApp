@@ -23,22 +23,22 @@ public class SubjectListService
     public SubjectListService (SubjectListRepository subjectListRepository) {
         this.subjectListRespository = subjectListRepository;
     }
-    public SubjectList getTutorsbySubjectName(@PathVariable String subject) throws SubjectNameNotFoundException {
-        Optional<SubjectList> tutors = this.subjectListRespository.findTutorsBySubjectName(subject);
-
-        if (tutors.isEmpty()) {
-            throw new SubjectNameNotFoundException("tutors not found with " + subject);
-        }
-
-        return tutors.get();
-    }
-    public SubjectList getSubjectsbyTutorName(String tutorName) throws TutorNameNotFoundException {
-        Optional<SubjectList> tutors = this.subjectListRespository.findSubjectByTutorName(tutorName);
-
-        if (tutors.isEmpty()) {
-            throw new TutorNameNotFoundException("subjects not found for" + tutorName);
-        }
-
-        return tutors.get();
-    }
+//    public SubjectList getTutorsbySubjectName(@PathVariable String subject) throws SubjectNameNotFoundException {
+//        Optional<SubjectList> tutors = this.subjectListRespository.findTutorsBySubjectName(subject);
+//
+//        if (tutors.isEmpty()) {
+//            throw new SubjectNameNotFoundException("tutors not found with " + subject);
+//        }
+//
+//        return tutors.get();
+//    }
+//    public SubjectList getSubjectsbyTutorName(String firstName, String lastName) throws TutorNameNotFoundException {
+//        Optional<SubjectList> tutors = this.subjectListRespository.findSubjectByFirstAndLastName(firstName, lastName);
+//
+//        if (tutors.isEmpty()) {
+//            throw new TutorNameNotFoundException("subjects not found for" + firstName+ " " + lastName);
+//        }
+//
+//        return tutors.get();
+//    }
 }

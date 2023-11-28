@@ -19,8 +19,11 @@ public class SubjectList
     @Column(name = "subjectName")
     private String subjectName;
 
-    @Column(name = "tutorName")
-    private String tutorName;
+    @Column(name = "firstName")
+    private String firstName;
+
+    @Column(name = "lastName")
+    private String lastName;
     @Column(name = "tutorId")
     private int tutorId;
 
@@ -41,17 +44,25 @@ public class SubjectList
     public String getSubjectName() {
         return subjectName;
     }
-    public String getTutorName() {
-        return tutorName;
+    public String getFirstName() {
+        return firstName;
     }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setFirstName() {
+        this.firstName = firstName;
+    }
+    public void setLastName() {this.lastName = lastName;}
     public int getTutorId() {
         return tutorId;
     }
-    public SubjectList(int subjectId, String subjectName, String tutorName, int tutorId) {
+    public SubjectList(int subjectId, String subjectName, String firstName, String lastName, int tutorId) {
         this.subjectId = subjectId;
         this.subjectName = subjectName;
         this.tutorId = tutorId;
-        this.tutorName = tutorName;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
 }

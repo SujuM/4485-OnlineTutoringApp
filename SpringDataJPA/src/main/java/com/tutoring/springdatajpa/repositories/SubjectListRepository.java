@@ -12,5 +12,5 @@ import java.util.Optional;
 public interface SubjectListRepository extends CrudRepository<SubjectList, Long>
 {
     Optional<SubjectList> findTutorsBySubjectName(String str);
-    Optional<SubjectList> findSubjectByTutorName(String str);
+//    Optional<SubjectList> findSubjectByFirstAndLastName(String str, String str2);
 }
