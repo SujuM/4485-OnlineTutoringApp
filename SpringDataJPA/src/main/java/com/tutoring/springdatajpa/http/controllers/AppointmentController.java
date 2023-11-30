@@ -44,6 +44,7 @@ public class AppointmentController {
 
         appointment.setStudentFirstName(student.getFirstName());
         appointment.setStudentLastName(student.getLastName());
+        appointment.setSubjectName(request.subjectName);
 
         appointment.setStudent(student);
         repository.save(appointment);
@@ -88,6 +89,7 @@ public class AppointmentController {
 
     public static class UpdateAppointmentRequest {
         public Long studentID;
+        public String subjectName;
     }
 
 }

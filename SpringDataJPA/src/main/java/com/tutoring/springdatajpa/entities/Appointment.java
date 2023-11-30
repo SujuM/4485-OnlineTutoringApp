@@ -32,6 +32,11 @@ public class Appointment {
     @Column
     private String studentLastName;
 
+
+
+    @Column
+    private String subjectName;
+
     @Column
     private Date startTime;
 
@@ -114,6 +119,14 @@ public class Appointment {
 
     public void setStudentLastName(String studentLastName) {
         this.studentLastName = studentLastName;
+    }
+
+    public String getSubjectName() {
+        return subjectName;
+    }
+
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
     }
 
     public Date getStartTime() {
