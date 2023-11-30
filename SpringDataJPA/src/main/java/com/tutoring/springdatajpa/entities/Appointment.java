@@ -21,6 +21,18 @@ public class Appointment {
     private Student student;
 
     @Column
+    private String tutorFirstName;
+
+    @Column
+    private String tutorLastName;
+
+    @Column
+    private String studentFirstName;
+
+    @Column
+    private String studentLastName;
+
+    @Column
     private Date startTime;
 
     @Column
@@ -44,6 +56,8 @@ public class Appointment {
     public Appointment(Tutor tutor, Date start_time, Date end_time) {
         this.tutor = tutor;
         tutor.addAppointment(this);
+        this.tutorFirstName = tutor.getFirstName();
+        this.tutorLastName = tutor.getLastName();
         this.startTime = start_time;
         this.endTime = end_time;
 
@@ -67,6 +81,39 @@ public class Appointment {
 
     public Student getStudent() {
         return student;
+    }
+
+
+    public String getTutorFirstName() {
+        return tutorFirstName;
+    }
+
+    public void setTutorFirstName(String tutorFirstName) {
+        this.tutorFirstName = tutorFirstName;
+    }
+
+    public String getTutorLastName() {
+        return tutorLastName;
+    }
+
+    public void setTutorLastName(String tutorLastName) {
+        this.tutorLastName = tutorLastName;
+    }
+
+    public String getStudentFirstName() {
+        return studentFirstName;
+    }
+
+    public void setStudentFirstName(String studentFirstName) {
+        this.studentFirstName = studentFirstName;
+    }
+
+    public String getStudentLastName() {
+        return studentLastName;
+    }
+
+    public void setStudentLastName(String studentLastName) {
+        this.studentLastName = studentLastName;
     }
 
     public Date getStartTime() {

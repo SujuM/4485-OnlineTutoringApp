@@ -42,6 +42,9 @@ public class AppointmentController {
         Appointment appointment = repository.findById(id).get();
         Student student = studentRepository.findById(request.studentID).get();
 
+        appointment.setStudentFirstName(student.getFirstName());
+        appointment.setStudentLastName(student.getLastName());
+
         appointment.setStudent(student);
         repository.save(appointment);
 
