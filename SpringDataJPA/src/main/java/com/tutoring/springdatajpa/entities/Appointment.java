@@ -20,6 +20,20 @@ public class Appointment {
     @ManyToOne(cascade = CascadeType.MERGE)
     private Student student;
 
+
+    @Column
+    private String tutorFirstName;
+
+    @Column
+    private String tutorLastName;
+
+    @Column
+    private String studentFirstName;
+
+    @Column
+    private String studentLastName;
+
+
     @Column
     private Date startTime;
 
@@ -83,6 +97,39 @@ public class Appointment {
 
     public void setStatus(AppointmentStatus status) {
         this.status = status;
+    }
+
+
+    public String getTutorFirstName() {
+        return tutorFirstName;
+    }
+
+    public void setTutorFirstName(String tutorFirstName) {
+        this.tutorFirstName = tutorFirstName;
+    }
+
+    public String getTutorLastName() {
+        return tutorLastName;
+    }
+
+    public void setTutorLastName(String tutorLastName) {
+        this.tutorLastName = tutorLastName;
+    }
+
+    public String getStudentFirstName() {
+        return studentFirstName;
+    }
+
+    public void setStudentFirstName(String studentFirstName) {
+        this.studentFirstName = studentFirstName;
+    }
+
+    public String getStudentLastName() {
+        return studentLastName;
+    }
+
+    public void setStudentLastName(String studentLastName) {
+        this.studentLastName = studentLastName;
     }
 }
 
