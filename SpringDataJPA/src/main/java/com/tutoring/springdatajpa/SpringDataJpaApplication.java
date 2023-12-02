@@ -40,17 +40,17 @@ public class SpringDataJpaApplication {
             //insertFourEmployees(repository);
             //System.out.println(repository.findAll());
             //System.out.println(repository.findEmployeesByLastNameContaining(" "));
-            insertUsers(userRepository);
+            //insertUsers(userRepository);
 
-            insertStudent(studentRepository);
+            //insertStudent(studentRepository);
 
 
-            insertTutors(tutorRepository);
+            //insertTutors(tutorRepository);
             //FavoritesService.addTutorToFavoriteList("johndoe@gmail.com","abigail36@gmail.com");
 
-            insertAppointments(appointmentRepository, tutorRepository, studentRepository);
+            //insertAppointments(appointmentRepository, tutorRepository, studentRepository);
 
-            insertSubjectList(subjectListRepository);
+            //insertSubjectList(subjectListRepository);
 
         };
 
