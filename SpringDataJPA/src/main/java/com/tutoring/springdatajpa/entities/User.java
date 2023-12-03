@@ -26,6 +26,8 @@ public class User implements UserDetails {
 
     @Column
     private boolean enabled;
+    @Column
+    private boolean emailVerified = false;
 
     @Column
     private Boolean isTutor = false;
@@ -84,6 +86,10 @@ public class User implements UserDetails {
         return username;
     }
 
+    public boolean isVerified() { return emailVerified; }
+
+    public void verify() { emailVerified = true; }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
@@ -115,6 +121,7 @@ public class User implements UserDetails {
     public boolean isCredentialsNonExpired() {
         return true;
     }
+
 
     @Override
     public boolean isEnabled() {

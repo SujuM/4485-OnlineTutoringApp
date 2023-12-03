@@ -1,6 +1,7 @@
 package com.tutoring.springdatajpa.http.controllers;
 
 import com.tutoring.springdatajpa.dto.OtpVerificationRequestDto;
+import com.tutoring.springdatajpa.dto.UserRegistrationRequestDto;
 import com.tutoring.springdatajpa.dto.UserLoginRequestDto;
 import com.tutoring.springdatajpa.dto.UserLoginSuccessDto;
 import com.tutoring.springdatajpa.entities.User;
@@ -48,6 +49,7 @@ public class AuthController {
         return result;
     }
 
+    /*
     @PostMapping("/auth/register")
     public ResponseEntity<String> register(@Valid @RequestBody RegisterRequest request)
     {
@@ -59,6 +61,14 @@ public class AuthController {
             return new ResponseEntity<>("registration success", HttpStatus.OK);
         }
         return new ResponseEntity<>("registration unsuccessful", HttpStatus.NOT_ACCEPTABLE);
+    }
+     */
+
+    @PostMapping(value="/auth/register", produces=MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<?> registrationHandler(
+            @RequestBody(required=true) final UserRegistrationRequestDto userRegistrationRequestDto) {
+        return userService.register(userRegistrationRequestDto);
     }
 
     @PostMapping("/{email}/auth/change-password")
@@ -90,9 +100,16 @@ public class AuthController {
 
     @PostMapping(value = "/verify-otp", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.OK)
-    public ResponseEntity<UserLoginSuccessDto> otpVerificationHandler(
+    public ResponseEntity<UserLoginSuccessDto> otpLoginHandler(
             @RequestBody(required = true) final OtpVerificationRequestDto otpVerificationRequestDto) {
         return userService.verifyOtp(otpVerificationRequestDto);
+    }
+
+    @PostMapping(value="/verify-email", produces=MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<?> userVerificationHandler(
+            @RequestBody(required=true) final UserLoginRequestDto userLoginRequestDto) {
+        return userService.verifyEmail(userLoginRequestDto);
     }
 
     public boolean checkPassword(String password)
