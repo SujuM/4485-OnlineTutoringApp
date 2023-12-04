@@ -37,20 +37,20 @@ public class SpringDataJpaApplication {
     public CommandLineRunner run(UserRepository userRepository, TutorRepository tutorRepository, StudentRepository studentRepository,
                                  AppointmentRepository appointmentRepository, SubjectListRepository subjectListRepository) {
         return (args) -> {
-            //insertFourEmployees(repository);
-            //System.out.println(repository.findAll());
-            //System.out.println(repository.findEmployeesByLastNameContaining(" "));
-            //insertUsers(userRepository);
-
-            //insertStudent(studentRepository);
-
-
-            //insertTutors(tutorRepository);
-            //FavoritesService.addTutorToFavoriteList("johndoe@gmail.com","abigail36@gmail.com");
-
-            //insertAppointments(appointmentRepository, tutorRepository, studentRepository);
-
-            //insertSubjectList(subjectListRepository);
+////            insertFourEmployees(repository);
+////            System.out.println(repository.findAll());
+////            System.out.println(repository.findEmployeesByLastNameContaining(" "));
+//            insertUsers(userRepository);
+//
+//            insertStudent(studentRepository);
+//
+//
+//            insertTutors(tutorRepository);
+////            FavoritesService.add("johndoe@gmail.com","abigail36@gmail.com");
+//
+//            insertAppointments(appointmentRepository, tutorRepository, studentRepository);
+//
+//            insertSubjectList(subjectListRepository);
 
         };
 
